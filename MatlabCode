@@ -1,0 +1,20 @@
+fileIDThrottle = fopen('Throttle.txt','r');
+formatSpec = '%d';
+A = fscanf(fileIDThrottle,formatSpec);
+
+fileIDSteering = fopen('Steering.txt','r');
+B = fscanf(fileIDSteering,formatSpec);
+
+plot(A)
+
+hold on
+
+plot(B)
+
+legend('Throttle','Steering');
+
+xlabel('Time (ms)');
+
+ylabel('Serial Monitor Readings');
+
+title('Lab 10 Final Project');
